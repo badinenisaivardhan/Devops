@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script{
                     sh '''
-                        docker build -t dockerbuild:${VERSION} .
+                        docker build -t myimage:${VERSION} .
                     '''
                 }
             }
