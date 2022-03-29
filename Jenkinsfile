@@ -8,6 +8,7 @@ pipeline {
             steps {
                 script{
                     sh '''
+                        sudo chmod 666 /var/run/docker.sock
                         cd /var/lib/jenkins/workspace/Pipelinejob_1/
                         docker build -t myimage:${VERSION} .
                     '''
