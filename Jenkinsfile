@@ -8,6 +8,7 @@ pipeline {
             steps {
                 script{
                     sh '''
+                        cd Devops
                         docker build -t myimage:${VERSION} .
                     '''
                 }
