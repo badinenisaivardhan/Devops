@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script{
                     sh '''
-                        cd Pipelinejob_1
+                        cd /var/lib/jenkins/workspace/Pipelinejob_1/
                         docker build -t myimage:${VERSION} .
                     '''
                 }
