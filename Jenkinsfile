@@ -29,10 +29,21 @@ pipeline {
             steps {
                 script{
                     sh '''
-                        docker run -dp 3000:3000 dockerbuild:${VERSION}
+                        docker run -dp 3000:3000 myimage:${VERSION}
                     '''
                 }
             }
+        }
+        stage('Checking Website ') {
+            steps {
+                script{
+                    sh '''
+                        curl localhost:3000
+                    '''
+                }
+            }
+
+
         }
     }
 }
