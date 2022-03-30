@@ -4,17 +4,6 @@ pipeline {
         VERSION = "${env.BUILD_ID}"
     }
     stages {
-        stage('Stopping All Docker Containers') {
-            steps {
-                script{
-                    sh '''
-                        docker kill \"@\$(docker ps -q)\" 
-                    '''
-                }
-            }
-        }
-
-
         stage('Building Docker Image') {
             steps {
                 script{
