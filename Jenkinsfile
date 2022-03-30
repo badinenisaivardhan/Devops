@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script{
                     sh '''
-                        docker run -dp 3000:3000 myimage:${VERSION}
+                        docker run -dp 1000:1000 myimage:${VERSION}
                     '''
                 }
             }
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script{
                     sh '''
-                        curl localhost:3000
+                        curl localhost:1000
                     '''
                 }
             }

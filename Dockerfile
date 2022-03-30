@@ -3,4 +3,4 @@ RUN apk add --no-cache python2 g++ make
 WORKDIR /app
 COPY . .
 CMD ["node", "app.js"]
-EXPOSE 3000
+EXPOSE 1000
