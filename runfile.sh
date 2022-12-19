@@ -1,3 +1,4 @@
+#!/bin/bash
 yum install unzip
 wget https://raw.githubusercontent.com/badinenisaivardhan/Devops/GNSS/ProjectETH.zip
 unzip ProjectETH.zip
